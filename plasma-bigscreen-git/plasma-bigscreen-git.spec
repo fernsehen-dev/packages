@@ -9,11 +9,8 @@ License:       BSD-2-Clause and BSD-3-Clause and CC0-1.0 and GPL-2.0-or-later an
 Summary:       A big launcher giving you access to any installed apps and skills
 Url:           https://invent.kde.org/plasma/plasma-bigscreen
 
-# Not currently in the plasma releases. Getting from gitlab tags.
-# Source0:       http://download.kde.org/%{stable_kf6}/plasma/%{version}/%{name}-%{version}.tar.xz
 Source0:       https://invent.kde.org/plasma/plasma-bigscreen/-/archive/%{commit}/plasma-bigscreen-%{commit}.tar.gz
 
-# handled by qt6-srpm-macros, which defines %%qt6_qtwebengine_arches
 %{?qt6_qtwebengine_arches:ExclusiveArch: %{qt6_qtwebengine_arches}}
 
 BuildRequires: extra-cmake-modules
@@ -69,7 +66,7 @@ Provides:   plasma-bigscreen-wayland = %{version}-%{release}
 
 
 %prep
-%autosetup -p1 -n %{name}-%{commit}
+%autosetup -p1 -n plasma-bigscreen-%{commit}
 
 
 %build
@@ -82,7 +79,6 @@ Provides:   plasma-bigscreen-wayland = %{version}-%{release}
 
 %check
 desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/kcm_mediacenter_{audiodevice,bigscreen_settings,kdeconnect,wifi}.desktop
-# desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/plasma-bigscreen-swap-session.desktop
 desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/org.kde.plasma.bigscreen.uvcviewer.desktop
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 
@@ -98,9 +94,8 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 %{_kf6_datadir}/sounds/plasma-bigscreen/
 %{_kf6_qtplugindir}/plasma/applets/org.kde.bigscreen.homescreen.so
 %{_kf6_datadir}/applications/kcm_mediacenter_*.desktop
-# %{_kf6_datadir}/applications/plasma-bigscreen-swap-session.desktop
 %{_kf6_datadir}/applications/org.kde.plasma.bigscreen.uvcviewer.desktop
- %{_kf6_bindir}/plasma-bigscreen-wayland
+%{_kf6_bindir}/plasma-bigscreen-wayland
 %{_kf6_datadir}/wayland-sessions/plasma-bigscreen-wayland.desktop
 
 
