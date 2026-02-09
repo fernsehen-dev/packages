@@ -49,6 +49,8 @@ BuildRequires: cmake(Qt6WebEngineCore)
 BuildRequires: qt6-qtwayland-devel >= %{version}
 
 BuildRequires: plasma-wayland-protocols-devel >= 1.18
+BuildRequires: libcec-devel >= 7.1.0
+BuildRequires: SDL3-devel >= 3.4.0
 
 Requires:   plasma-workspace-wayland >= %{version}
 Requires:   plasma-nano >= %{version}
@@ -61,6 +63,8 @@ Requires:   kwin >= %{version}
 Requires:   kde-connect >= %{version}
 Requires:   qt6-qtwayland >= %{version}
 Requires:   plasma-wayland-protocols >= 1.18
+Requires:   libcec >= 7.1.0
+Requires:   SDL3 >= 3.4.0
 
 Provides:   %{name}-wayland = %{version}-%{release}
 Provides:   plasma-bigscreen = %{version}-%{release}
