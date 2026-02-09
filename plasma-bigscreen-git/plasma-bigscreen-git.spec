@@ -48,6 +48,8 @@ BuildRequires: cmake(Qt6Multimedia)
 BuildRequires: cmake(Qt6WebEngineCore)
 BuildRequires: qt6-qtwayland-devel >= %{version}
 
+BuildRequires: plasma-wayland-protocols-devel >= 1.18
+
 Requires:   plasma-workspace-wayland >= %{version}
 Requires:   plasma-nano >= %{version}
 Requires:   plasma-nm >= %{version}
@@ -58,6 +60,7 @@ Requires:   kscreen >= %{version}
 Requires:   kwin >= %{version}
 Requires:   kde-connect >= %{version}
 Requires:   qt6-qtwayland >= %{version}
+Requires:   plasma-wayland-protocols >= 1.18
 
 Provides:   %{name}-wayland = %{version}-%{release}
 Provides:   plasma-bigscreen = %{version}-%{release}
