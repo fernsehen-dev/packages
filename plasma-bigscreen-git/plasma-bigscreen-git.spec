@@ -11,7 +11,7 @@ Url:           https://invent.kde.org/plasma/plasma-bigscreen
 
 # Not currently in the plasma releases. Getting from gitlab tags.
 # Source0:       http://download.kde.org/%{stable_kf6}/plasma/%{version}/%{name}-%{version}.tar.xz
-Source0:       https://invent.kde.org/plasma/%{name}/-/archive/%{commit}/%{name}-%{commit}.tar.gz
+Source0:       https://invent.kde.org/plasma/plasma-bigscreen/-/archive/%{commit}/plasma-bigscreen-%{commit}.tar.gz
 
 # handled by qt6-srpm-macros, which defines %%qt6_qtwebengine_arches
 %{?qt6_qtwebengine_arches:ExclusiveArch: %{qt6_qtwebengine_arches}}
@@ -61,6 +61,8 @@ Requires:   kwin >= %{version}
 Requires:   kde-connect >= %{version}
 
 Provides:   %{name}-wayland = %{version}-%{release}
+Provides:   plasma-bigscreen = %{version}-%{release}
+Provides:   plasma-bigscreen-wayland = %{version}-%{release}
 
 %description
 %{summary}
