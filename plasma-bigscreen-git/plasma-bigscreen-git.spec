@@ -2,7 +2,7 @@
 %global shortcommit 01af9609
 %global gitdate 20260107
 
-Name:          plasma-bigscreen
+Name:          plasma-bigscreen-git
 Version:       6.4.80~%{gitdate}.%{shortcommit}
 Release:       3%{?dist}
 License:       BSD-2-Clause and BSD-3-Clause and CC0-1.0 and GPL-2.0-or-later and CC-BY-SA-4.0
