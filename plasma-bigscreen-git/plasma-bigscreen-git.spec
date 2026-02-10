@@ -1,6 +1,7 @@
 %global commit 01af960984d493006812c935c38626297001849f
 %global shortcommit 01af9609
 %global gitdate 20260107
+%global debug_package %{nil}
 
 Name:          plasma-bigscreen-git
 Version:       6.4.80~%{gitdate}.%{shortcommit}
@@ -88,6 +89,8 @@ Provides:   plasma-bigscreen-wayland = %{version}-%{release}
 
 %check
 desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/kcm_mediacenter_{audiodevice,bigscreen_settings,kdeconnect,wifi}.desktop
+desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/plasma-bigscreen-swap-session.desktop
+desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/org.kde.plasma.bigscreen.inputhandler.desktop
 desktop-file-validate %{buildroot}%{_kf6_datadir}/applications/org.kde.plasma.bigscreen.uvcviewer.desktop
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 
@@ -102,10 +105,14 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 %{_kf6_datadir}/plasma/shells/org.kde.plasma.bigscreen/
 %{_kf6_datadir}/sounds/plasma-bigscreen/
 %{_kf6_qtplugindir}/plasma/applets/org.kde.bigscreen.homescreen.so
+%{_kf6_qtplugindir}/kf6/kded/kded_plasma_bigscreen_start.so
 %{_kf6_datadir}/applications/kcm_mediacenter_*.desktop
+%{_kf6_datadir}/applications/plasma-bigscreen-swap-session.desktop
 %{_kf6_datadir}/applications/org.kde.plasma.bigscreen.uvcviewer.desktop
+%{_kf6_datadir}/applications/org.kde.plasma.bigscreen.inputhandler.desktop
 %{_kf6_bindir}/plasma-bigscreen-wayland
 %{_kf6_datadir}/wayland-sessions/plasma-bigscreen-wayland.desktop
+%{_kf6_bindir}/plasma-bigscreen-inputhandler
 
 
 %changelog
