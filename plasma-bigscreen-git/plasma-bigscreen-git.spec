@@ -113,6 +113,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 %{_kf6_datadir}/wayland-sessions/plasma-bigscreen-wayland.desktop
 %{_kf6_bindir}/plasma-bigscreen-inputhandler
 %{_kf6_datadir}/dbus-1/interfaces/org.kde.biglauncher.xml
+%{_libdir}/udev/rules.d/40-uinput.rules
 
 %changelog
 * Mon Feb 09 2026 Marcel Mrówka <micro.mail88@gmail.com>
