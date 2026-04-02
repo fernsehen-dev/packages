@@ -1,6 +1,6 @@
-%global commit 01af960984d493006812c935c38626297001849f
-%global shortcommit 01af9609
-%global gitdate 20260107
+%global commit 38668ec09261dc6cdd04d53a4e770ab220aba9e2
+%global shortcommit 38668ec0
+%global gitdate 20260402
 %global debug_package %{nil}
 
 Name:          plasma-bigscreen-git
