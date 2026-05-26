@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:          plasma-bigscreen-git
-Version:       6.5.80~%{gitdate}.%{shortcommit}
+Version:       6.6.90~%{gitdate}.%{shortcommit}
 Release:       1%{?dist}
 License:       BSD-2-Clause and BSD-3-Clause and CC0-1.0 and GPL-2.0-or-later and CC-BY-SA-4.0
 Summary:       A big launcher giving you access to any installed apps and skills
