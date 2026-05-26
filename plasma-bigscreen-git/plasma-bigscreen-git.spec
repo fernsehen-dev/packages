@@ -1,11 +1,11 @@
-%global commit 38668ec09261dc6cdd04d53a4e770ab220aba9e2
-%global shortcommit 38668ec0
-%global gitdate 20260402
+%global commit e0de68211c00a67d40547d59b132d3ec4da1fd03
+%global shortcommit e0de6821
+%global gitdate 20260524
 %global debug_package %{nil}
 
 Name:          plasma-bigscreen-git
-Version:       6.4.80~%{gitdate}.%{shortcommit}
-Release:       3%{?dist}
+Version:       6.5.80~%{gitdate}.%{shortcommit}
+Release:       1%{?dist}
 License:       BSD-2-Clause and BSD-3-Clause and CC0-1.0 and GPL-2.0-or-later and CC-BY-SA-4.0
 Summary:       A big launcher giving you access to any installed apps and skills
 Url:           https://invent.kde.org/plasma/plasma-bigscreen
